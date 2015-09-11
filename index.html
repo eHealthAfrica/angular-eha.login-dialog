@@ -10,6 +10,8 @@
   <body>
     <div ng-controller="AppCtrl as ctrl">
       <p ng-if="ctrl.loggedIn" class="alert-success">Logged in</p>
+      <p>Username: <code>test</code></p>
+      <p>Password: <code>test</code></p>
       <button class="btn btn-info" ng-click="ctrl.login()">Login</button>
       <button class="btn btn-warning" ng-click="ctrl.logout()">Logout</button>
     </div>
@@ -24,19 +26,11 @@
     <script src="//rawgit.com/eHealthAfrica/angular-eha.login-dialog-bower/master/login-dialog.template.js"></script>
     <script>
       angular.module('app', [
-        'template/modal/backdrop.html',
-        'template/modal/window.html',
         'eha.login-service',
         'eha.login-dialog'
       ])
-        .config(function(pouchDBProvider, POUCHDB_METHODS) {
-          POUCHDB_METHODS.login = 'qify'
-        })
         .config(function(ehaLoginServiceProvider) {
           ehaLoginServiceProvider.config('https://ehalogindialog.iriscouch.com/letsgo')
-        })
-        .run(function(ehaLoginService, ehaLoginDialogService) {
-          ehaLoginService.config(ehaLoginDialogService)
         })
         .controller('AppCtrl', function(ehaLoginService) {
           var self = this
