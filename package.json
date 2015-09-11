@@ -1,0 +1,59 @@
+{
+  "name": "angular-eha.login-dialog",
+  "description": "Login dialog box",
+  "main": "dist/login-dialog.template.js",
+  "scripts": {
+    "build": "grunt build",
+    "pretest": "standard",
+    "test": "echo separate the body from the mind",
+    "presemantic-release": "npm run build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "watch": "onchange src -- npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eHealthAfrica/angular-eha.login-dialog"
+  },
+  "contributors": [
+    "Karl Westin <karl.westin@ehealthnigeria.org>",
+    "Tom Vincent <tom.vincent@ehealthnigeria.org> (https://tlvince.com)"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "login-dialog",
+    "auth",
+    "eha"
+  ],
+  "homepage": "http://docs.ehealthafrica.org/angular-eha.login-dialog/",
+  "devDependencies": {
+    "angular": "^1.3.13",
+    "angular-mocks": "^1.3.13",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-html2js": "^0.3.0",
+    "grunt-karma": "^0.12.0",
+    "grunt-ng-annotate": "^0.10.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "load-grunt-tasks": "^3.1.0",
+    "onchange": "^2.0.0",
+    "phantomjs": "^1.9.18",
+    "semantic-release": "^4.3.4",
+    "standard": "^5.2.1"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/eHealthAfrica/angular-eha.login-dialog/issues"
+  },
+  "standard": {
+    "globals": [
+      "angular"
+    ]
+  }
+}
