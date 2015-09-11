@@ -7,7 +7,9 @@
    */
   var ngModule = angular.module('eha.login-dialog.service', [
     'gettext',
-    'ui.bootstrap.modal'
+    'ui.bootstrap.modal',
+    'template/modal/backdrop.html',
+    'template/modal/window.html'
   ])
 
   ngModule.service('ehaLoginDialogService', function (
